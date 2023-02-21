@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{font-size: 20pt;}</style>
+    <script>
+        var info='', message='', result=''; //전역변수
+
+        var str = 'lgYc CITY kimHI';
+        document.write(str.toLowerCase(), '<br>');
+        document.write(str.toUpperCase(), '<br>');
+        document.write('<br>');
+
+        var msg = '서울 구로구 서울 하이미디어 서울 화이팅';
+        document.write(msg.replace('서울','seoul'), '<br>');
+        document.write(msg.replaceAll('서울','seoul'), '<br>');
+
+        var jumin = '870231-2576412';
+        var gender = jumin.charAt(7);
+        if(gender=='1' || gender=='3'){info = '남자입니다.';}
+        else if(gender=='2' || gender=='4'){info = '여자입니다.';}
+        else {info = '잘못입력했습니다';}
+        document.write(info, '<br>');
+
+        //당신의 생일은 02월 31일 입니다.
+        var month = jumin.substr(2,2);
+        var day = jumin.substring(4,6);
+        document.write('당신의 생일은'+ month +'월' + day + '일' + '입니다.');
+
+        var jumin1="87031"; //6자리
+        var jumin2="2576412"; //7자리
+        var jumin3="8702312576412";
+        var size1=0, size2=0, size3=0;
+        size1= jumin1.length;
+        size2= jumin2.length;
+        size3= jumin3.length;
+        if(size1 != 6){info = '주민번호 앞자리 잘못됨';}
+        document.write(info, '<br>');
+        
+        if(size2 != 7){info = '주민번호 뒷자리 잘못됨';}
+        document.write(info, '<br>');
+    </script>
+</head>
+<body>
+    <!-- 386page 문자열-->
+</body>
+</html>
